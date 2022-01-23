@@ -24,5 +24,5 @@ for service, status in dict_service.items():
         if f"Starting {service}...OK" in restarted:
             logger.info(f"O serviço {service} foi restartado com sucesso.")
         else:
-            logger.critical(f"O restart do serviço {service} falhor")
+            logger.critical(f"O restart do serviço {service} falhou")
             logger.critical(restarted)
