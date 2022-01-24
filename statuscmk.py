@@ -31,7 +31,7 @@ for out in output.split("\n"):
     dict_service[splited[0].strip()] = splited[1].strip()
 
 for service, status in dict_service.items():
-    if status == "stopped":
+    if status != "running":
         logger.critical(f"O Serviço: {service} parou!")
         pros_restart = subprocess.Popen(
             f"omd restart check_mk {service}",
